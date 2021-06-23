@@ -46,10 +46,10 @@ guestbook=> INSERT INTO entries (guestName, content) values ('first guest', 'I g
 INSERT 0 1 \
 guestbook=> INSERT INTO entries (guestName, content) values ('second guest', 'Me too!'); \
 INSERT 0 1 \
-guestbook=> 
+guestbook=> \
 guestbook=> SELECT * FROM entries; \
-  guestname   |   content   | entryid 
---------------+-------------+---------
- first guest  | I got here! |       1
- second guest | Me too!     |       2
+  guestname   |   content   | entryid \
+--------------+-------------+--------- \
+ first guest  | I got here! |       1 \
+ second guest | Me too!     |       2 \
 (2 rows)
