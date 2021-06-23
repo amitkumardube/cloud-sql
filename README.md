@@ -3,14 +3,14 @@
 Create a VM instance having only private IP
 Create a cloud sql instance in same network as VM. Having only private IP
 
-## how to install postgresql
+## How to install postgresql
 sudo apt-get -y install postgresql
 
 ## How to install cloud sql proxy
 wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy \
 chmod +x cloud_sql_proxy
 
-## comamnd to connect
+## Comamnd to connect
 amitkumardube@instance:~$ psql "sslmode=disable dbname=postgres user=postgres hostaddr=192.168.32.3" \
 Password for user postgres: \
 psql (11.12 (Debian 11.12-0+deb10u1), server 13.2) \
@@ -20,10 +20,10 @@ Type "help" for help. \
 
 postgres=> 
 
-## how to enable cloud sql proxy
+## How to enable cloud sql proxy
 ./cloud_sql_proxy -instances=indian-food1:us-central1:postgre-1=tcp:1234 & 
 
-##  connection via cloud sql proxy
+##  Connection via cloud sql proxy
 amitkumardube@instance:~$ psql "sslmode=disable dbname=postgres user=postgres hostaddr=127.0.0.1 port=1234" \
 2021/06/23 19:35:38 New connection for "indian-food1:us-central1:postgre-1" \
 Password for user postgres: 2021/06/23 19:35:38 Client closed local connection on 127.0.0.1:1234 \
@@ -36,7 +36,7 @@ Type "help" for help. \
 
 postgres=> 
 
-## usage
+## Usage
 
 postgres=> CREATE DATABASE guestbook; \
 CREATE DATABASE \
