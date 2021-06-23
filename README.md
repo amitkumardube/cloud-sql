@@ -1,6 +1,14 @@
 # cloud-sql
 
-Create a VM instance
+Create a VM instance having only private IP
+Create a cloud sql instance in same network as VM. Having only private IP
+
+## how to install postgresql
+sudo apt-get -y install postgresql
+
+## How to install cloud sql proxy
+wget https://dl.google.com/cloudsql/cloud_sql_proxy.linux.amd64 -O cloud_sql_proxy \
+chmod +x cloud_sql_proxy
 
 ## comamnd to connect
 amitkumardube@instance:~$ psql "sslmode=disable dbname=postgres user=postgres hostaddr=192.168.32.3" \
