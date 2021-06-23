@@ -3,17 +3,17 @@
 Create a VM instance
 
 ## comamnd to connect
-amitkumardube@instance:~$ psql "sslmode=disable dbname=postgres user=postgres hostaddr=192.168.32.3"
-Password for user postgres: 
-psql (11.12 (Debian 11.12-0+deb10u1), server 13.2)
-WARNING: psql major version 11, server major version 13.
-         Some psql features might not work.
-Type "help" for help.
+amitkumardube@instance:~$ psql "sslmode=disable dbname=postgres user=postgres hostaddr=192.168.32.3" \
+Password for user postgres: \
+psql (11.12 (Debian 11.12-0+deb10u1), server 13.2) \
+WARNING: psql major version 11, server major version 13. \
+         Some psql features might not work. \
+Type "help" for help. \
 
 postgres=> 
 
 ## how to enable cloud sql proxy
-./cloud_sql_proxy -instances=indian-food1:us-central1:postgre-1=tcp:1234 &
+./cloud_sql_proxy -instances=indian-food1:us-central1:postgre-1=tcp:1234 & \
 
 ##  connection via cloud sql proxy
 amitkumardube@instance:~$ psql "sslmode=disable dbname=postgres user=postgres hostaddr=127.0.0.1 port=1234"
